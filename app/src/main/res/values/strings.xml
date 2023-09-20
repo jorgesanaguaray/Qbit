@@ -1,3 +1,23 @@
 <resources>
     <string name="app_name">Qbit</string>
+    <string name="add">Add</string>
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+    <string name="category">Category</string>
+    <string name="created_by">Created by</string>
+    <string name="reading_time">Reading time</string>
+    <string name="date">Date</string>
+    <string name="thumbnail_link">Thumbnail link</string>
+    <string name="image_link">Image link</string>
+    <string name="post_link">Post link</string>
+    <string name="enter_a_title">Enter a title</string>
+    <string name="enter_a_description">Enter a description</string>
+    <string name="enter_a_category">Enter a category</string>
+    <string name="enter_a_name">Enter a name</string>
+    <string name="enter_the_reading_time">Enter the reading time</string>
+    <string name="enter_a_date">Enter a date</string>
+    <string name="enter_the_thumbnail_link">Enter the thumbnail link</string>
+    <string name="enter_the_image_link">Enter the image link</string>
+    <string name="enter_the_post_link">Enter the post link</string>
+    <string name="the_post_has_been_added_successfully">The post has been added successfully</string>
 </resources>
