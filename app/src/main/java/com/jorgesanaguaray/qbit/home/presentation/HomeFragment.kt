@@ -5,19 +5,47 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.get
 import androidx.navigation.fragment.findNavController
 import com.jorgesanaguaray.qbit.R
+import com.jorgesanaguaray.qbit.core.domain.Post
 import com.jorgesanaguaray.qbit.databinding.FragmentHomeBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class HomeFragment : Fragment() {
 
+    private lateinit var homeViewModel: HomeViewModel
+    private lateinit var homeAdapter: HomeAdapter
+
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        homeViewModel = ViewModelProvider(this).get()
+        homeAdapter = HomeAdapter(
+            onMoreClick = {
+            },
+            onPostClick = {
+            }
+        )
+
+    }
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
+
+        homeViewModel.posts.observe(viewLifecycleOwner) {
+            setupRecyclerView(it)
+        }
+
+        homeViewModel.isLoading.observe(viewLifecycleOwner) {
+            setupViewsVisibility(it)
+        }
+
         return binding.root
     }
 
@@ -26,6 +54,23 @@ class HomeFragment : Fragment() {
 
         binding.mFloatingButton.setOnClickListener {
             goAddScreen()
+        }
+
+    }
+
+    private fun setupRecyclerView(posts: List<Post>) {
+        homeAdapter.setPosts(posts)
+        binding.mRecyclerView.adapter = homeAdapter
+    }
+
+    private fun setupViewsVisibility(isLoading: Boolean) {
+
+        if (isLoading) {
+            binding.mProgressBar.visibility = View.VISIBLE
+            binding.mRecyclerView.visibility = View.GONE
+        } else {
+            binding.mProgressBar.visibility = View.GONE
+            binding.mRecyclerView.visibility = View.VISIBLE
         }
 
     }

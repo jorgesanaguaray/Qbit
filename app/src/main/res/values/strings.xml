@@ -20,4 +20,6 @@
     <string name="enter_the_image_link">Enter the image link</string>
     <string name="enter_the_post_link">Enter the post link</string>
     <string name="the_post_has_been_added_successfully">The post has been added successfully</string>
+    <string name="more">More</string>
+    <string name="image">Image</string>
 </resources>
