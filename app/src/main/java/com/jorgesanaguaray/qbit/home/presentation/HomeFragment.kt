@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.get
 import androidx.navigation.fragment.findNavController
+import coil.load
 import com.jorgesanaguaray.qbit.R
 import com.jorgesanaguaray.qbit.core.domain.Post
 import com.jorgesanaguaray.qbit.databinding.FragmentHomeBinding
@@ -38,6 +39,13 @@ class HomeFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
 
+        binding.mHeader.load(R.drawable.header) {
+            placeholder(R.drawable.progress_animation)
+            error(R.drawable.ic_error)
+            crossfade(true)
+            crossfade(400)
+        }
+
         homeViewModel.posts.observe(viewLifecycleOwner) {
             setupRecyclerView(it)
         }
@@ -67,10 +75,10 @@ class HomeFragment : Fragment() {
 
         if (isLoading) {
             binding.mProgressBar.visibility = View.VISIBLE
-            binding.mRecyclerView.visibility = View.GONE
+            binding.mNestedScroll.visibility = View.GONE
         } else {
             binding.mProgressBar.visibility = View.GONE
-            binding.mRecyclerView.visibility = View.VISIBLE
+            binding.mNestedScroll.visibility = View.VISIBLE
         }
 
     }

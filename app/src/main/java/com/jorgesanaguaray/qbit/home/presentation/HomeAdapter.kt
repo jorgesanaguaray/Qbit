@@ -32,7 +32,7 @@ class HomeAdapter(
         holder.binding.apply {
 
             mTitle.text = post.title
-            mImage.load(post.imageLink) {
+            mImage.load(post.thumbnailLink) {
                 placeholder(R.drawable.progress_animation)
                 error(R.drawable.ic_error)
                 crossfade(true)
