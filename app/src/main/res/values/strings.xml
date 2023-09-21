@@ -24,4 +24,10 @@
     <string name="image">Image</string>
     <string name="navigate_back">Navigate back</string>
     <string name="add_post">Add post</string>
+    <string name="close_dialog">Close dialog</string>
+    <string name="share">Share</string>
+    <string name="open_in_app">Open in app</string>
+    <string name="open_in_browser">Open in browser</string>
+    <string name="category_">Category:</string>
+    <string name="created_by_">Created by:</string>
 </resources>
