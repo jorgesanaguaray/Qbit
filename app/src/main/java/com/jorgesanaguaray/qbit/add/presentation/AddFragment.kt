@@ -71,14 +71,6 @@ class AddFragment : Fragment() {
                 binding.mEditTextCreatedBy.error = resources.getString(R.string.enter_a_name)
             }
 
-            TextUtils.isEmpty(binding.mEditTextReadingTime.text.toString()) -> {
-                binding.mEditTextReadingTime.error = resources.getString(R.string.enter_the_reading_time)
-            }
-
-            TextUtils.isEmpty(binding.mEditTextDate.text.toString()) -> {
-                binding.mEditTextDate.error = resources.getString(R.string.enter_a_date)
-            }
-
             TextUtils.isEmpty(binding.mEditTextThumbnailLink.text.toString()) -> {
                 binding.mEditTextThumbnailLink.error = resources.getString(R.string.enter_the_thumbnail_link)
             }
@@ -109,8 +101,6 @@ class AddFragment : Fragment() {
             description = binding.mEditTextDescription.text.toString().trim(),
             category = binding.mEditTextCategory.text.toString().trim(),
             createdBy = binding.mEditTextCreatedBy.text.toString().trim(),
-            readingTime = binding.mEditTextReadingTime.text.toString().trim(),
-            date = binding.mEditTextDate.text.toString().trim(),
             thumbnailLink = binding.mEditTextThumbnailLink.text.toString().trim(),
             imageLink = binding.mEditTextImageLink.text.toString().trim(),
             postLink = binding.mEditTextPostLink.text.toString().trim()
@@ -128,8 +118,6 @@ class AddFragment : Fragment() {
         binding.mEditTextDescription.setText("")
         binding.mEditTextCategory.setText("")
         binding.mEditTextCreatedBy.setText("")
-        binding.mEditTextReadingTime.setText("")
-        binding.mEditTextDate.setText("")
         binding.mEditTextThumbnailLink.setText("")
         binding.mEditTextImageLink.setText("")
         binding.mEditTextPostLink.setText("")

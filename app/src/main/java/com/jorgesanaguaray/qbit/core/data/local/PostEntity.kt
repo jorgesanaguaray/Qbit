@@ -16,8 +16,6 @@ data class PostEntity(
     val description: String,
     val category: String,
     val createdBy: String,
-    val readingTime: String,
-    val date: String,
     val thumbnailLink: String,
     val imageLink: String,
     val postLink: String

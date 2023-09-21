@@ -9,12 +9,12 @@ import com.jorgesanaguaray.qbit.core.domain.Post
 
 fun Post.toDatabase(): PostEntity {
 
-    return PostEntity(id, title, description, category, createdBy, readingTime, date, thumbnailLink, imageLink, postLink)
+    return PostEntity(id, title, description, category, createdBy, thumbnailLink, imageLink, postLink)
 
 }
 
 fun PostEntity.toDomain(): Post {
 
-    return Post(id, title, description, category, createdBy, readingTime, date, thumbnailLink, imageLink, postLink)
+    return Post(id, title, description, category, createdBy, thumbnailLink, imageLink, postLink)
 
 }
