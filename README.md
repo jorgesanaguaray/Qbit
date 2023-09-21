@@ -4,25 +4,26 @@ Esta es una pequeña aplicación para Android que presenta una lista de publicac
 
 ## Features
 
-- Home: muestra una lista de publicaciones.
-- Add: permite agregar nuevas publicaciones.
-- Detail: permite abrir la publicación en la app o en el navegador.
+- **Home**: muestra una lista de publicaciones.
+- **Add**: permite agregar nuevas publicaciones.
+- **Detail**: permite abrir la publicación en la app o en el navegador.
 
 ## Tech Stack
 
-- Coil: para establecer las imágenes.
-- XML: para hacer la UI de la App.
-- Kotlin: como lenguaje de programación.
-- Room: para la base de datos local.
-- MVVM: arquitectura de diseño.
-- LiveData: para observar los cambios de estado.
-- Coroutines: para ejecutar código asíncrono.
-- Navigation: para navegar entre pantallas.
-- ViewModel: para administrar el estado de las pantallas.
-- Dagger Hilt: para inyección de dependencias. 
-- ViewBinding: para enlazar las vistas con sus clases respectivas.
-- Android Studio: como IDE.
-- SwipeRefreshLayout: para deslizar y refrescar una pantalla.
+- **Coil**: para establecer las imágenes.
+- **XML**: para hacer la UI de la App.
+- **Kotlin**: como lenguaje de programación.
+- **Room**: para la base de datos local.
+- **MVVM**: arquitectura de diseño.
+- **LiveData**: para observar los cambios de estado.
+- **Coroutines**: para ejecutar código asíncrono.
+- **Navigation**: para navegar entre pantallas.
+- **ViewModel**: para administrar el estado de las pantallas.
+- **Dagger Hilt**: para inyección de dependencias. 
+- **ViewBinding**: para enlazar las vistas con sus clases respectivas.
+- **Android Studio**: como IDE.
+- **SwipeRefreshLayout**: para deslizar y refrescar una pantalla.
+- **Git y GitHub**: para tener un historial de cambios en el código y un respaldo.
 
 ## Screenshots (Light Mode)
 
