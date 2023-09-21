@@ -7,12 +7,14 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.os.bundleOf
 import androidx.core.text.HtmlCompat
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.get
 import androidx.navigation.fragment.findNavController
 import coil.load
 import com.google.android.material.bottomsheet.BottomSheetDialog
+import com.jorgesanaguaray.qbit.Constants.Companion.KEY_POST_ID
 import com.jorgesanaguaray.qbit.R
 import com.jorgesanaguaray.qbit.core.domain.Post
 import com.jorgesanaguaray.qbit.databinding.DialogDetailBinding
@@ -39,6 +41,7 @@ class HomeFragment : Fragment() {
                 setupDetailDialog(it)
             },
             onPostClick = {
+                openInApp(it)
             }
         )
 
@@ -111,6 +114,8 @@ class HomeFragment : Fragment() {
                 sharePost(post.postLink)
             }
             mOpenInApp.setOnClickListener {
+                openInApp(post.id!!)
+                hideDetailDialog()
             }
             mOpenInBrowser.setOnClickListener {
                 openInBrowser(post.postLink)
@@ -145,6 +150,11 @@ class HomeFragment : Fragment() {
         shareIntent.type = "text/plain"
         shareIntent.putExtra(Intent.EXTRA_TEXT, postLink)
         startActivity(Intent.createChooser(shareIntent, resources.getString(R.string.share)))
+    }
+
+    private fun openInApp(postId: Int) {
+        val bundle = bundleOf(KEY_POST_ID to postId)
+        findNavController().navigate(R.id.action_mHomeNavigation_to_mDetailNavigation, bundle)
     }
 
     private fun openInBrowser(postLink: String) {
