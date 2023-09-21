@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Qbit</string>
+    <string name="add">Agregar</string>
+    <string name="title">Título</string>
+    <string name="description">Descripción</string>
+    <string name="category">Categoría</string>
+    <string name="created_by">Creado por</string>
+    <string name="thumbnail_link">Url de la miniatura</string>
+    <string name="image_link">Url de la imagen</string>
+    <string name="post_link">Url de la publicación</string>
+    <string name="enter_a_title">Ingrese un título</string>
+    <string name="enter_a_description">Ingrese una descripción</string>
+    <string name="enter_a_category">Ingrese una categoría</string>
+    <string name="enter_a_name">Ingrese un nombre</string>
+    <string name="enter_the_thumbnail_link">Ingrese la url de la miniatura</string>
+    <string name="enter_the_image_link">Ingrese la url de la imagen</string>
+    <string name="enter_the_post_link">Ingrese la url de la publicación</string>
+    <string name="the_post_has_been_added_successfully">La publicación ha sido agregada satisfactoriamente</string>
+    <string name="more">Más</string>
+    <string name="image">Imagen</string>
+    <string name="navigate_back">Navegar hacia atrás</string>
+    <string name="add_post">Agregar publicación</string>
+    <string name="close_dialog">Cerrar diálogo</string>
+    <string name="share">Compartir</string>
+    <string name="open_in_app">Abrir en la aplicación</string>
+    <string name="open_in_browser">Abrir en el navegador</string>
+    <string name="category_">Categoría:</string>
+    <string name="created_by_">Creado por:</string>
+</resources>
