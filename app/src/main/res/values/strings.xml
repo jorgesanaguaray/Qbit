@@ -22,4 +22,6 @@
     <string name="the_post_has_been_added_successfully">The post has been added successfully</string>
     <string name="more">More</string>
     <string name="image">Image</string>
+    <string name="navigate_back">Navigate back</string>
+    <string name="add_post">Add post</string>
 </resources>

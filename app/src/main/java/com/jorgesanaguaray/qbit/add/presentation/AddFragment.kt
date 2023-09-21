@@ -9,6 +9,8 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.get
+import androidx.navigation.NavController
+import androidx.navigation.fragment.findNavController
 import com.jorgesanaguaray.qbit.R
 import com.jorgesanaguaray.qbit.core.domain.Post
 import com.jorgesanaguaray.qbit.databinding.FragmentAddBinding
@@ -18,6 +20,7 @@ import dagger.hilt.android.AndroidEntryPoint
 class AddFragment : Fragment() {
 
     private lateinit var addViewModel: AddViewModel
+    private lateinit var navController: NavController
 
     private var _binding: FragmentAddBinding? = null
     private val binding get() = _binding!!
@@ -26,6 +29,7 @@ class AddFragment : Fragment() {
         super.onCreate(savedInstanceState)
 
         addViewModel = ViewModelProvider(this).get()
+        navController = findNavController()
 
     }
 
@@ -36,6 +40,10 @@ class AddFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        binding.mBack.setOnClickListener {
+            navController.navigateUp()
+        }
 
         binding.mAdd.setOnClickListener {
             validateCredentials()
